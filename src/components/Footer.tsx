@@ -1,40 +1,42 @@
-import BubbleBackground from "@/effects/BubbleBackground";
-import {
-  buildCustomWhatsAppUrl,
-  DENTIST_DEFAULT_MESSAGE,
-  DENTIST_PHONE,
-} from "@/lib/dataNumber";
+import BubbleBackground from "@/effects/techFloat";
 import Link from "next/link";
-import { FaInstagram, FaFacebook, FaWhatsapp, FaTiktok } from "react-icons/fa";
+import { FaInstagram, FaFacebook, FaTiktok } from "react-icons/fa";
 
 export default function Footer() {
-  const whatsAppLink = buildCustomWhatsAppUrl(
-    DENTIST_PHONE,
-    DENTIST_DEFAULT_MESSAGE,
-  );
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-brand-dark text-brand-bg/90 border-brand-medium/20 relative border-t px-4 pt-8 pb-4 font-sans md:pb-10">
-      <div className="mx-auto grid max-w-6xl grid-cols-1 gap-8 md:grid-cols-3">
+    <footer className="bg-brand-dark-gray text-brand-light-gray border-brand-medium/20 relative border-t px-4 pt-8 pb-4 font-sans md:pb-10">
+      <div className="mx-auto
+    max-w-6xl
+    grid
+    grid-cols-1
+    md:grid-cols-[1.5fr_1fr_1fr]
+    gap-10">
         {/* Coluna 1: Sobre / Identidade */}
-        <div className="space-y-4">
-          <h3 className="font-serif text-2xl font-medium text-white">
-            SorrisoPremium
-          </h3>
-          <p className="text-brand-bg/70 max-w-sm text-sm leading-relaxed">
-            Referência em tratamentos odontológicos estéticos e integrativos.
-            Tecnologia avançada com o acolhimento que você merece.
+        <div className="space-y-4 text-center md:text-left">
+          <Link
+            href="/"
+            className="from-brand-red font-bold bg-linear-to-r to-white bg-clip-text text-transparent uppercase"
+          >
+            Style Tech
+          </Link>
+
+          <p className="text-brand-bg/70 max-w-sm mx-auto md:mx-0 text-sm leading-relaxed">
+            Smartphones, smartwatches e acessórios premium com garantia,
+            procedência e atendimento especializado para quem busca tecnologia
+            com confiança.
           </p>
+
           <p className="text-brand-light text-xs font-semibold italic">
-            CRO-PR 12345 / Dr. João Silva & Dra. Maria Silva
+            Produtos selecionados • Garantia • Suporte especializado
           </p>
         </div>
 
         {/* Coluna 2: Links Rápidos */}
-        <div className="space-y-3">
-          <h4 className="text-base font-semibold text-white">Links Rápidos</h4>
-          <ul className="flex flex-col space-y-2 text-sm">
+        <div className="space-y-3 text-center md:text-left">
+          <h4 className="text-base font-semibold text-red-500">Links Rápidos</h4>
+          <ul className="flex flex-col items-center space-y-2 text-sm md:items-start">
             <li>
               <Link
                 href="/"
@@ -71,9 +73,9 @@ export default function Footer() {
         </div>
 
         {/* Coluna 3: Redes Sociais e Atendimento */}
-        <div className="space-y-4">
-          <h4 className="text-base font-semibold text-white">Redes Sociais</h4>
-          <div className="text-brand-light flex gap-4 text-2xl">
+        <div className="space-y-4 text-center md:text-left">
+          <h4 className="text-base font-semibold text-red-500">Redes Sociais</h4>
+          <div className="text-brand-light flex justify-center gap-4 text-2xl md:justify-start">
             <a
               href="#"
               className="transition-colors hover:text-white"
@@ -96,9 +98,10 @@ export default function Footer() {
               <FaTiktok />
             </a>
           </div>
-          <div className="text-brand-bg/60 space-y-1 text-xs">
-            <p>Segunda a Sexta: 08h às 18h</p>
-            <p>Sábado: 08h às 12h (Apenas com agendamento)</p>
+          <div className="text-gray-400 space-y-1 text-xs">
+            <p><strong>Horário:</strong> Segunda a Sexta</p>
+            <p><strong>Horário:</strong> 08h às 18h</p>
+            <p>retiradas no sábado mediante agendamento</p>
           </div>
         </div>
       </div>
@@ -106,7 +109,7 @@ export default function Footer() {
       {/* Direitos Autorais */}
       <div className="border-brand-medium/10 text-brand-bg/50 mx-auto mt-8 max-w-6xl border-t pt-8 text-center text-xs">
         <p>
-          &copy; {currentYear} SorrisoPremium. Todos os direitos reservados.
+          &copy; {currentYear} Style Tech. Todos os direitos reservados.
         </p>
       </div>
       <BubbleBackground />

@@ -19,7 +19,7 @@ export function buildCustomWhatsAppUrl(phone: string, message: string): string {
   return `https://wa.me/${formattedPhone}?text=${encodedMessage}`;
 }
 
-export const DENTIST_PHONE = "67 99999-9999";
+export const STORE_PHONE = "67 99999-9999";
 
-export const DENTIST_DEFAULT_MESSAGE =
-  "Olá! Gostaria de agendar uma consulta de avaliação com o dentista.";
+export const STORE_DEFAULT_MESSAGE =
+  "Gostaria de ver o catálogo de celulares e acessórios.";

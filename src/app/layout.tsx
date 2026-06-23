@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import AnimationProvider from "@/components/AnimationProvider";
 
+// Mantidas as fontes para evitar quebras de compilação em outros componentes do app
 const baloo2 = Baloo_2({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700", "800"],
@@ -33,42 +34,42 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://sorrisopremium.vercel.app",
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://styletech.vercel.app", // Corrigido para a URL correta da marca
   ),
 
   title: {
-    default: "Sorriso Premium | Clínica Odontológica em Campo Grande - MS",
-    template: "%s | Sorriso Premium",
+    default: "Style Tech | Smartphones, Acessórios e Assistência Técnica em Campo Grande - MS",
+    template: "%s | Style Tech",
   },
 
   description:
-    "Clínica odontológica em Campo Grande - MS especializada em implantes dentários, ortodontia, alinhadores invisíveis, estética dental e odontologia preventiva. Atendimento humanizado e tecnologia de ponta.",
+    "Sua loja especializada em smartphones novos e seminovos originais, acessórios premium e assistência técnica ágil com garantia em Campo Grande - MS.",
 
-  applicationName: "Sorriso Premium",
+  applicationName: "Style Tech",
 
   keywords: [
-    "dentista campo grande",
-    "clínica odontológica",
-    "implantes dentários",
-    "ortodontia",
-    "alinhadores invisíveis",
-    "clareamento dental",
-    "lentes de contato dental",
-    "odontologia estética",
-    "dentista campo grande ms",
-    "tratamento odontológico",
-    "sorriso premium",
+    "smartphone campo grande",
+    "loja de celulares campo grande ms",
+    "capinha para celular",
+    "assistência técnica de celular",
+    "película para smartphone",
+    "comprar iphone campo grande",
+    "acessórios premium celular",
+    "conserto de smartphone ms",
+    "troca de tela celular",
+    "troca de bateria smartphone",
+    "style tech",
   ],
 
   authors: [
     {
-      name: "Sorriso Premium",
+      name: "Style Tech",
     },
   ],
 
-  creator: "Sorriso Premium",
+  creator: "Style Tech",
 
-  publisher: "Sorriso Premium",
+  publisher: "Style Tech",
 
   robots: {
     index: true,
@@ -83,21 +84,20 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/brand/tooth.svg",
-    shortcut: "/brand/tooth.svg",
-    apple: "/brand/tooth.svg",
+    icon: "/brand/phone.svg",
+    shortcut: "/brand/phone.svg",
+    apple: "/brand/phone.svg",
   },
 
   openGraph: {
-    title: "Sorriso Premium | Clínica Odontológica em Campo Grande - MS",
+    title: "Style Tech | Smartphones, Acessórios e Assistência Técnica",
 
     description:
-      "Implantes dentários, ortodontia, alinhadores invisíveis e odontologia estética com atendimento humanizado.",
+      "Venda de aparelhos celulares originais com garantia, capas e fones premium, além de laboratório de assistência técnica ágil.",
 
-    url:
-      process.env.NEXT_PUBLIC_SITE_URL ?? "https://sorrisopremium.vercel.app",
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://styletech.vercel.app",
 
-    siteName: "Sorriso Premium",
+    siteName: "Style Tech", // Corrigido para o nome oficial
 
     locale: "pt_BR",
 
@@ -105,10 +105,10 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/brand/doutores.jpg",
+        url: "/hero/phones.jpg",
         width: 1200,
         height: 630,
-        alt: "Equipe da Clínica Sorriso Premium",
+        alt: "Showroom e Smartphones Premium da Style Tech", // Alt textual descritivo para SEO
       },
     ],
   },
@@ -116,15 +116,15 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
 
-    title: "Sorriso Premium | Clínica Odontológica",
+    title: "Style Tech | Smartphones e Acessórios",
 
     description:
-      "Implantes, ortodontia e odontologia estética em Campo Grande - MS.",
+      "Venda de aparelhos originais, acessórios premium e assistência técnica especializada em Campo Grande - MS.",
 
-    images: ["/brand/doutores.jpg"],
+    images: ["/hero/phones.jpg"],
   },
 
-  category: "health",
+  category: "technology", // Categoria alterada de 'health' para 'technology'
 };
 
 export default function RootLayout({
@@ -135,9 +135,10 @@ export default function RootLayout({
   return (
     <html
       lang="pt-BR"
+      data-scroll-behavior="smooth" // Corrigido: Evita o aviso do console e gerencia transições do Next.js
       className={`${inter.variable} ${playfair.variable} ${quicksand.variable} ${baloo2.variable}`}
     >
-      <body className="bg-brand-bg text-brand-deep font-sans antialiased">
+      <body className="bg-brand-black font-sans antialiased text-gray-100">
         <AnimationProvider />
         <Header />
         <main>{children}</main>

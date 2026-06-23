@@ -13,12 +13,11 @@ html {
   --font-national-park: "National Park", system-ui, sans-serif;
 
   /* Sua paleta de cores oficial */
-  --color-brand-dark: #0c2c55; /* Azul Escuro (Confiança/Autoridade) */
-  --color-brand-medium: #296374; /* Azul Esverdeado/Turquesa */
-  --color-brand-light: #629faa; /* Azul Claro/Clínico */
-  --color-brand-bg2: #ededce; /* Off-White/Areia (Fundo Suave) */
-  --color-brand-bg: #eeeeee; /* Off-Areia (Fundo Mais que Suave) */
-  --color-brand-deep: #06200b; /* Quase Preto/Verde Profundo para Textos */
+  --color-brand-black: #0d0d0d; /* Preto Profundo (Fundo/Premium) */
+  --color-brand-dark-gray: #1a1a1a; /* Cinza Escuro (Cards/Bordas) */
+  --color-brand-light-gray: #f5f5f7; /* Cinza Apple/Claro (Fundo Secundário) */
+  --color-brand-red: #e50914; /* Vermelho Vibrante (Gatilho/CTA/Preço) */
+  --color-brand-red-hover: #b20710; /* Vermelho Escuro para Estados de Hover */
 
   /* Fade */
   --animate-fade-in: fadeIn 0.7s ease-out forwards; /* Efeitos somente para componentes */
@@ -37,6 +36,29 @@ html {
   --animate-slow-zoom: slowZoom 8s ease-in-out infinite alternate; /* Efeitos somente para componentes */
 
   --animate-bubble-float: bubble-float 8s infinite ease-in-out; /* animação de bolhas */
+
+  /* animação hero badges */
+  @keyframes pulseNode {
+    0%,
+    100% {
+      transform: scale(1);
+      opacity: 0.3;
+    }
+
+    50% {
+      transform: scale(1.6);
+      opacity: 0.8;
+    }
+  }
+  @keyframes flow {
+    from {
+      stroke-dashoffset: 10;
+    }
+
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
 
   /* Efeitos somente para componentes */
   @keyframes fadeIn {
@@ -126,22 +148,18 @@ html {
   }
 
   /* animação de bolhas */
-  @keyframes bubble-float {
+  @keyframes techFloat {
     0% {
-      transform: translateY(100vh) translateX(0) scale(0.8);
+      transform: translateY(40px);
       opacity: 0;
     }
-    10% {
-      opacity: 0.6;
+
+    20% {
+      opacity: 0.12;
     }
-    50% {
-      transform: translateY(50vh) translateX(20px) scale(1.1);
-    }
-    90% {
-      opacity: 0.6;
-    }
+
     100% {
-      transform: translateY(-10vh) translateX(-10px) scale(0.9);
+      transform: translateY(-250px);
       opacity: 0;
     }
   }
@@ -149,8 +167,8 @@ html {
 
 /* Força o fundo da página inteira a usar a cor de fundo da sua identidade */
 body {
-  background-color: #ededce; /* Equivalente à sua var(--color-brand-bg) */
-  color: #06200b; /* Equivalente à sua var(--color-brand-deep) */
+  background-color: transparent; /* Equivalente à sua var(--color-brand-bg) */
+  color: #0d0d0d; /* Equivalente à sua var(--color-brand-deep) */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -252,4 +270,9 @@ body {
 
 .gs-pin__ring--delay {
   animation-delay: 1.25s;
+}
+
+/* bolhas do footer */
+.animate-tech-float {
+  animation: techFloat linear infinite;
 }

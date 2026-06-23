@@ -2,15 +2,15 @@
 
 import {
   buildCustomWhatsAppUrl,
-  DENTIST_DEFAULT_MESSAGE,
-  DENTIST_PHONE,
+  STORE_DEFAULT_MESSAGE,
+  STORE_PHONE,
 } from "@/lib/dataNumber";
 import { useState, useEffect } from "react";
 
 export default function MobileContact() {
   const whatsAppLink = buildCustomWhatsAppUrl(
-    DENTIST_PHONE,
-    DENTIST_DEFAULT_MESSAGE,
+    STORE_PHONE,
+    STORE_DEFAULT_MESSAGE,
   );
   const [isVisible, setIsVisible] = useState(false);
   const [showBubble, setShowBubble] = useState(true);

@@ -61,7 +61,7 @@ export default function MobileContact() {
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Falar com atendimento no WhatsApp"
-        className="bg-brand-red hover:bg-brand-red-hover relative flex h-14 w-14 items-center justify-center rounded-xl text-white shadow-xl shadow-brand-red/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer border border-brand-red/10"
+        className="bg-brand-red hover:bg-brand-red-hover relative flex h-14 w-14 items-center justify-center rounded-xl text-white shadow-xl shadow-brand-red/20 transition-all duration-300 hover:scale-110 active:scale-95 cursor-pointer border border-brand-red/10 opacity-60"
       >
         {/* Efeito de Pulsação Ondular Vermelha */}
         <span className="bg-brand-red absolute inset-0 -z-10 animate-[ping_2s_infinite] rounded-xl opacity-30" />

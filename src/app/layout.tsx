@@ -105,7 +105,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/hero/phones.jpg",
+        url: "/hero/phones-icon.jpg",
         width: 1200,
         height: 630,
         alt: "Showroom e Smartphones Premium da Style Tech", // Alt textual descritivo para SEO
@@ -121,7 +121,7 @@ export const metadata: Metadata = {
     description:
       "Venda de aparelhos originais, acessórios premium e assistência técnica especializada em Campo Grande - MS.",
 
-    images: ["/hero/phones.jpg"],
+    images: ["/hero/phones-icon.jpg"],
   },
 
   category: "technology", // Categoria alterada de 'health' para 'technology'

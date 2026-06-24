@@ -34,7 +34,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://styletech.vercel.app", // Corrigido para a URL correta da marca
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://smartphonestore.vercel.app/", // Corrigido para a URL correta da marca
   ),
 
   title: {
@@ -95,7 +95,7 @@ export const metadata: Metadata = {
     description:
       "Venda de aparelhos celulares originais com garantia, capas e fones premium, além de laboratório de assistência técnica ágil.",
 
-    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://styletech.vercel.app",
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://smartphonestore.vercel.app/",
 
     siteName: "Style Tech", // Corrigido para o nome oficial
 
